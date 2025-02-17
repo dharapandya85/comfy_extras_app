@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=42","wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfy-extras"                # REQUIRED: Project name
+version = "0.1.0" 
+requires-python = ">=3.10" 
+dependencies = [
+    "numpy>=1.21.0",
+    "torch>=2.0.0"
+]
+                # Optional but recommended
+[project.optional-dependencies]
+dev = ["pytest", "black"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+zip-safe = false
+#packages = ["comfy", "comfy_extras", "custom_nodes"]
+# py-modules=[]
+# include-package-data=true
+
+[tool.setuptools.packages.find]
+where=["src"]
+include = ["comfy*", "comfy_extras*", "custom_nodes*"]
+exclude = [
+    "app*", "web*", "input*",
+    "output*", "models*",
+    "notebooks*", "api_server*",
+    "script_examples*"
+] 
+# find={where = ["src"],include = ["comfy*","comfy_extras*","custom_nodes*"], exclude = ["app*", "web*", "input*", "output*", "models*", "notebooks*", "api_server*", "script_examples*"]}
+[tool.setuptools.package-data]
+"*" = ["*"]
+
+
+
+# py-modules = []
