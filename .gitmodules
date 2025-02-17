@@ -1,0 +1,3 @@
+[submodule "ComfyUI_windows_portable_nvidia/ComfyUI_windows_portable/ComfyUI"]
+	path = ComfyUI_windows_portable_nvidia/ComfyUI_windows_portable/ComfyUI
+	url = https://github.com/dharapandya85/comfy_extras_app.git
